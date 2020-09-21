@@ -2,11 +2,13 @@ new Vue({
   el: "#vue-app",
   data: {
     name: "Jillo Woche",
-    job: "Plumber"
+    job: "Software Developer",
+    website: "https://jillowoche.dev",
+    websiteTag: '<a href="https://jillowoche.dev">Tagged website</a>',
   },
   methods: {
-      greet: function(time){
-        return `Good ${time} ${this.name}!`
-      }
-  }
+    greet: function (time) {
+      return `Good ${time} ${this.name}!`;
+    },
+  },
 });

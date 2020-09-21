@@ -11,6 +11,8 @@
       <h1>{{ greet('morning')}}</h1>
       <p>Name: {{ name }}</p>
       <p>Job: {{ job }}</p>
+      <a v-bind:href="website">Jillo Woche</a>
+      <p v-html="websiteTag"></p>
     </div>
     <script src="app.js"></script>
   </body>
