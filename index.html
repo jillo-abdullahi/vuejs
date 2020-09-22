@@ -14,10 +14,11 @@
       <a v-bind:href="website">Jillo Woche</a>
       <p v-html="websiteTag"></p>
       <p>Age: {{ age }}</p>
-      <button v-on:click="addAge(1)">Add Age</button>
+      <button v-on:click.once="addAge(1)">Add Age</button>
       <button v-on:click="subtractAge(1)">Subract Age</button>
       <button @dblclick="addAge(10)">Add 10 years</button>
       <button @dblclick="subtractAge(10)">Subract 10 years</button>
+      <a @click.prevent="click" href="https://jillowoche.dev">Prevent Event Modifier link</a>
       <div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
     </div>
     <script src="app.js"></script>
