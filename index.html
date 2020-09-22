@@ -37,6 +37,18 @@
       <p>B - {{ b }}</p>
       <p>Age + A = {{ addToA}}</p>
       <p>Age + B = {{ addToB}}</p>
+
+      <h1>Dynamic CSS</h1>
+      <h2>Example 1</h2>
+      <!--<div :class="{available}" @click="available = !available">
+        <span class="dynamic-span">JILLO WOCHE</span>
+      </div>-->
+      <h2>Example 2</h2>
+      <button @click="nearby=!nearby">Toggle nearby</button>
+      <button @click="available= !available">Toggle available</button>
+      <div :class="compClasses">
+        <span class="dynamic-span">JILLO WOCHE</span>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
