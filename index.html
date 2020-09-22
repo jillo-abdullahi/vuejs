@@ -20,6 +20,11 @@
       <button @dblclick="subtractAge(10)">Subract 10 years</button>
       <a @click.prevent="click" href="https://jillowoche.dev">Prevent Event Modifier link</a>
       <div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
+      <h1>Keyboard events</h1>
+      <label>Name:</label>
+      <input type="text" @keyup.enter="logName"/>
+      <label>Age:</label>
+      <input type="text" @keyup.alt.enter="logAge"/>
     </div>
     <script src="app.js"></script>
   </body>

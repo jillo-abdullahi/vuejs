@@ -14,17 +14,23 @@ new Vue({
       return `Good ${time} ${this.name}!`;
     },
     addAge: function (inc) {
-      return this.age+=inc;
+      return (this.age += inc);
     },
     subtractAge: function (dec) {
-      return this.age-=dec;
+      return (this.age -= dec);
     },
-    updateXY: function(event){
-        this.x = event.offsetX;
-        this.y = event.offsetY;
+    updateXY: function (event) {
+      this.x = event.offsetX;
+      this.y = event.offsetY;
     },
-    click: function(){
-      alert("This event took over the default Click event.")
-    }
+    click: function () {
+      alert("This event took over the default Click event.");
+    },
+    logName: function () {
+      console.log("You entered your name");
+    },
+    logAge: function () {
+      console.log("You entered your age");
+    },
   },
 });
