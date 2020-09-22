@@ -30,7 +30,7 @@
       <input type="text" v-model="age" />
       <span>{{ age }}</span>
 
-      <h2>Computed Properties</h2>
+      <h1>Computed Properties</h1>
       <button v-on:click="a++">Add to A</button>
       <button v-on:click="b++">Add to B</button>
       <p>A - {{ a }}</p>
@@ -49,6 +49,15 @@
       <div :class="compClasses">
         <span class="dynamic-span">JILLO WOCHE</span>
       </div>
+
+      <h1>Conditionals</h1>
+      <button @click="error=!error">Toggle Error</button>
+      <button @click="success=!success">Toggle Success</button>
+      <p v-if="error">There was an error!</p>
+      <p v-else-if="success">Yay! Success</p>
+      <p>..................................</p>
+      <p v-show="error">There has been an error</p>
+      <p v-show="success">Whoooooooo! Success :)</p>
     </div>
     <script src="app.js"></script>
   </body>
