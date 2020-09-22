@@ -1,9 +1,9 @@
 new Vue({
   el: "#vue-app",
   data: {
-    name: "Jillo Woche",
+    name: "",
     job: "Software Developer",
-    age: 30,
+    age: "",
     website: "https://jillowoche.dev",
     websiteTag: '<a href="https://jillowoche.dev">Tagged website</a>',
     x: 0,
@@ -26,11 +26,14 @@ new Vue({
     click: function () {
       alert("This event took over the default Click event.");
     },
-    logName: function () {
-      console.log("You entered your name");
+    logName: function (event) {
+      // console.log(event.target.value);
+      this.name = event.target.value
+      
     },
     logAge: function () {
       console.log("You entered your age");
+      this.age = event.target.value
     },
   },
 });
